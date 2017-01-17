@@ -6,3 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 include_directories(include)
 
 add_executable(A1.1 src/a1_1.cpp)
+add_executable(A1.2 src/a1_2.cpp)

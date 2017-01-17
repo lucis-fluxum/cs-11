@@ -1,10 +1,13 @@
 /**
  * @author Lucas Street
- * @date 1/17/17
+ * @date 1/24/17
  * CS 11, Dave Harden
  * Assignment 1.1 - a1_1.cpp
  *
- * Performs simple tasks with pointers, such as swapping values of variables or array elements.
+ * Performs simple tasks with pointers, such as swapping values of variables or array
+ * elements.
+ *
+ * This program demonstrates the basic use of pointers.
  */
 
 #include <iostream>
@@ -80,6 +83,9 @@ int main() {
 /**
  * Changes the value of a variable to zero if it is negative.
  *
+ * @pre *x is any real integer
+ * @post *x >= 0
+ *
  * @param x a pointer to the value to test
  */
 void noNegatives(int *x) {
@@ -95,6 +101,9 @@ void noNegatives(int *x) {
 
 /**
  * Swaps the values of its arguments.
+ *
+ * @pre  *first = A and *second = B
+ * @post *first = B and *second = A
  *
  * @param first a pointer to the first value
  * @param second a pointer to the second value
