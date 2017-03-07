@@ -19,3 +19,6 @@ add_executable(A4.1 src/a4_1.cpp src/Fraction.cpp include/Fraction.h)
 add_executable(A5.1 src/a5_1.cpp src/mystring.cpp include/mystring.h)
 
 add_executable(A6.1 src/a6_1.cpp src/mystring.cpp include/mystring.h)
+
+file(GLOB a7_SRC "include/creature/*.h" "src/creature/*.cpp")
+add_executable(A7 src/a7.cpp ${a7_SRC})
