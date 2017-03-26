@@ -24,3 +24,4 @@ file(GLOB a7_SRC "include/creature/*.h" "src/creature/*.cpp")
 add_executable(A7 src/a7.cpp ${a7_SRC})
 
 add_executable(A8.1 src/a8_1.cpp)
+add_executable(A8.2 src/a8_2.cpp include/orderedpair.h)
