@@ -22,3 +22,5 @@ add_executable(A6.1 src/a6_1.cpp src/mystring.cpp include/mystring.h)
 
 file(GLOB a7_SRC "include/creature/*.h" "src/creature/*.cpp")
 add_executable(A7 src/a7.cpp ${a7_SRC})
+
+add_executable(A8.1 src/a8_1.cpp)
