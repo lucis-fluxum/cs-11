@@ -25,3 +25,5 @@ add_executable(A7 src/a7.cpp ${a7_SRC})
 
 add_executable(A8.1 src/a8_1.cpp)
 add_executable(A8.2 src/a8_2.cpp include/orderedpair.h)
+
+add_executable(A9.1 src/a9_1.cpp src/sequence.cpp include/sequence.h)
