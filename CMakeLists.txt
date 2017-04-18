@@ -30,3 +30,5 @@ include_directories(include)
 #add_executable(A9.1 src/a9_1.cpp src/sequence.cpp include/sequence.h)
 
 add_executable(A10.1 src/a10_1.cpp src/sequence.cpp include/sequence.h)
+
+add_executable(A11.1 src/a11_1.cpp src/sequence.cpp include/sequence.h)
