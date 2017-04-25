@@ -35,3 +35,4 @@ add_executable(A11.1 src/a11_1.cpp src/sequence.cpp include/sequence.h)
 
 add_executable(A12.1 src/a12_1.cpp)
 add_executable(A12.2 src/a12_2.cpp src/mystring.cpp include/mystring.h)
+add_executable(A12.3 src/a12_3.cpp)

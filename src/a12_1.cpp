@@ -105,3 +105,8 @@ void assertEqual(const char *expected, const char *actual) {
         cout << "X\n" << actual << " =/= " << expected << endl;
     }
 }
+
+// Output
+/*
+......
+*/
