@@ -38,3 +38,5 @@ add_executable(A12.2 src/a12_2.cpp src/mystring.cpp include/mystring.h)
 add_executable(A12.3 src/a12_3.cpp)
 
 add_executable(A13.1 src/a13_1.cpp src/binarytree.cpp include/binarytree.h include/LL.h)
+
+add_executable(A14.1 src/a14_1.cpp src/binarytree.cpp include/binarytree.h include/LL.h)

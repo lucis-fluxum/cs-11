@@ -1,8 +1,8 @@
 /**
  * @author Lucas Street
- * @date 5/2/17
+ * @date 5/9/17
  * CS 11, Dave Harden
- * Assignment 13.1 - binarytree.cpp
+ * Assignment 14.1 - binarytree.cpp
  */
 
 #include <iostream>
@@ -18,6 +18,26 @@ using namespace std;
 binarytree::binarytree() {
     root = nullptr;
     mSize = 0;
+}
+
+
+
+
+
+
+binarytree::binarytree(const binarytree &other) {
+    binarytree *new_tree = other.clone();
+    this->root = new_tree->root;
+    this->mSize = new_tree->mSize;
+}
+
+
+
+
+
+
+binarytree::~binarytree() {
+    clear();
 }
 
 
@@ -83,10 +103,46 @@ binarytree::size_type binarytree::num_primes() const {
 
 
 
-LL<int> binarytree::toLL() {
+LL<int> binarytree::toLL() const {
     LL<int> list;
     toLL_aux(root, list);
     return list;
+}
+
+
+
+
+
+
+binarytree *binarytree::clone() const {
+    binarytree *new_tree = new binarytree;
+    clone_aux(root, new_tree);
+    return new_tree;
+}
+
+
+
+
+
+
+void binarytree::clear() {
+    clear_aux(root);
+    mSize = 0;
+}
+
+
+
+
+
+
+binarytree binarytree::operator=(const binarytree &right) {
+    if (this != &right) {
+        this->clear();
+        binarytree *new_tree = right.clone();
+        this->root = new_tree->root;
+        this->mSize = new_tree->mSize;
+    }
+    return *this;
 }
 
 
@@ -225,5 +281,32 @@ void toLL_aux(binarytree::treenode *root, LL<int> &list) {
         toLL_aux(root->right, list);
         list.push_front(root->data);
         toLL_aux(root->left, list);
+    }
+}
+
+
+
+
+
+
+void clone_aux(binarytree::treenode *root, binarytree *new_tree) {
+    if (root != nullptr) {
+        new_tree->insert(root->data);
+        clone_aux(root->left, new_tree);
+        clone_aux(root->right, new_tree);
+    }
+}
+
+
+
+
+
+
+void clear_aux(binarytree::treenode *&root) {
+    if (root != nullptr) {
+        clear_aux(root->left);
+        clear_aux(root->right);
+        delete root;
+        root = nullptr;
     }
 }

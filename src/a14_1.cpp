@@ -1,10 +1,9 @@
 /**
  * @author Lucas Street
- * @date 5/2/17
+ * @date 5/9/17
  * CS 11, Dave Harden
- * Assignment 13.1 - a13_1.cpp
+ * Assignment 14.1 - a14_1.cpp
  */
-
 
 #include <iostream>
 #include "binarytree.h"
@@ -98,28 +97,6 @@ int main() {
     list.print();
     cout << endl << "list2 should be unchanged.  Here it is: ";
     list2.print();
-    cout << endl;
-
-    // Testing LL
-    binarytree t;
-    for (int i = 0; i < 20; i++) {
-        t.insert(rand() % 50);
-    }
-
-    cout << "The binary tree: ";
-    t.print();
-    cout << endl;
-
-    LL<int> l;
-    l = t.toLL();
-
-    cout << "The linked list: ";
-
-    for (LL<int>::iterator i = l.begin(); i != l.end(); i++) {
-        cout << *i << " ";
-    }
-    cout << endl;
-
     cout << endl;
 
     return 0;
